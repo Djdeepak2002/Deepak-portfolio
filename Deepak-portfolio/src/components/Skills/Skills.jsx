@@ -4,10 +4,21 @@ import { SkillsInfo } from "../../constants";
 import Tilt from "react-parallax-tilt";
 
 const Skills = () => (
-  <section
-    id="skills"
-    className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans bg-skills-gradient clip-path-custom"
-  >
+  // <section
+  //   id="skills"
+  //   className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans bg-skills-gradient clip-path-custom"
+  // >
+
+        <section
+  id="skills"
+  style={{
+    clipPath: "polygon(0 0, 100% 0, 100% 98%, 75% 96%, 0 100%)",
+    background:
+      "linear-gradient(38.73deg, rgba(204,0,187,0.15) 0%, rgba(201,32,184,0) 50%), linear-gradient(141.27deg, rgba(0,70,209,0) 50%, rgba(0,70,209,0.15) 100%)",
+  }}
+  className="py-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans"
+>
+
     {/* Section Title */}
     <div className="text-center mb-8">
       <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>

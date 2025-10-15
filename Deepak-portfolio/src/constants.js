@@ -99,7 +99,7 @@ export const SkillsInfo = [
       { name: "PostgreSQL", logo: postgreLogo },
       { name: "Springboot", logo: springbootLogo },
       { name: "Firebase", logo: firebaseLogo },
-      { name: "SequelizeORM", logo: sequelizeLogo },
+      { name: "Sequelize", logo: sequelizeLogo },
     ],
   },
   {
@@ -237,8 +237,8 @@ export const education = [
     school: "MMCC College,Deccan Gymkhana, Pune",
     date: "June 2017 - March 2019",
     grade: "78%",
-    desc: "I completed my class 12 education from MMCC College,Deccan Gymkhana, Pune under the SSC board, where I studied Physics, Chemistry, and Mathematics (PCM) with Computer Science.",
-    degree: "SSC(XII) - PCM with Computer Science",
+    desc: "I completed my class 12th education from MMCC College,Deccan Gymkhana, Pune under the SSC board, where I studied Physics, Chemistry, and Mathematics (PCM) with Computer Science.",
+    degree: "HSC(XII) - PCM with Computer Science",
   },
   // {
   //   id: 3,

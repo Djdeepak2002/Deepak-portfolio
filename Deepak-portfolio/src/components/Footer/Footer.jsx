@@ -53,7 +53,7 @@ const Footer = () => {
               className="text-xl hover:text-purple-500 transition-transform transform hover:scale-110"
             >
               {item.icon}
-            </a>
+            </a>  
           ))}
         </div>
 

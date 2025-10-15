@@ -13,20 +13,12 @@ const Work = () => {
   };
 
   return (
-    // <section
-    //   id="work"
-    //   className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans relative"
-    // >
+    <section
+      id="work"
+      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans relative"
+    >
 
-        <section
-  id="work"
-  style={{
-    clipPath: "polygon(0 0, 100% 0, 100% 98%, 75% 96%, 0 100%)",
-    background:
-      "linear-gradient(38.73deg, rgba(204,0,187,0.15) 0%, rgba(201,32,184,0) 50%), linear-gradient(141.27deg, rgba(0,70,209,0) 50%, rgba(0,70,209,0.15) 100%)",
-  }}
-  className="py-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans"
->
+
 
       {/* Section Title */}
       <div className="text-center mb-16">

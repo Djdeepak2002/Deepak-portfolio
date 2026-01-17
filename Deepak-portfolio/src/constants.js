@@ -1,7 +1,7 @@
 // Skills Section Logo's
 import htmlLogo from "./assets/tech_logo/html.png";
 import cssLogo from "./assets/tech_logo/css.png";
-import sassLogo from "./assets/tech_logo/sass.png";
+// import sassLogo from "./assets/tech_logo/sass.png";
 import javascriptLogo from "./assets/tech_logo/javascript.png";
 import reactjsLogo from "./assets/tech_logo/reactjs.png";
 import angularLogo from "./assets/tech_logo/angular.png";
@@ -80,7 +80,7 @@ export const SkillsInfo = [
     skills: [
       { name: "HTML", logo: htmlLogo },
       { name: "CSS", logo: cssLogo },
-      { name: "SASS", logo: sassLogo },
+      // { name: "SASS", logo: sassLogo },
       { name: "JavaScript", logo: javascriptLogo },
       { name: "React JS", logo: reactjsLogo },
       // { name: 'Angular', logo: angularLogo },

@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { experiences } from "../../constants";
 
@@ -32,7 +30,8 @@ const Experience = () => {
         {experiences.map((experience) => (
           <div key={experience.id} className="mb-14 relative">
             {/* Timeline Logo */}
-            <div className="absolute left-8 top-6 transform -translate-x-1/2 w-12 h-12 rounded-full overflow-hidden ring-4 ring-[#050414] bg-gray-900 flex justify-center items-center z-10">
+            {/* Timeline Logo */}
+            <div className="absolute left-0 md:left-8 top-6 transform -translate-x-1/2 w-12 h-12 rounded-full overflow-hidden ring-4 ring-[#050414] bg-gray-900 flex justify-center items-center z-10">
               <img
                 src={experience.img}
                 alt={experience.company}

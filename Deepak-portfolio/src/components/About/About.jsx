@@ -1,6 +1,6 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
-
+import { FaLinkedin, FaEnvelope, FaDownload } from "react-icons/fa";
 import Tilt from "react-parallax-tilt";
 import profileImage from "../../assets/profile21.png";
 
@@ -8,12 +8,14 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
+      // className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
+      className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-8 md:mt-12 lg:mt-5"
     >
       <div className="flex flex-col-reverse md:flex-row justify-between items-center">
-
         {/*-------------------------- Left Side --------------------------------------------- */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
+          {/* <div className="md:w-1/2 text-center md:text-left mt-2 md:mt-0"> */}
+
           {/* Greeting */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
             Hi, I am
@@ -41,35 +43,59 @@ const About = () => {
             />
           </h3>
 
-
-
           {/*--------------------- About Me Paragraph ----------------------*/}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I am a full-stack developer with over 2 years of experience in
-            building scalable web applications. Skilled in both front-end and
-            back-end development, I specialize in the MERN stack and other
-            modern technologies to create seamless user experiences and
-            efficient solutions.
+            I build real-world, scalable applications with a focus on backend
+            architecture, performance, and production-ready design. From
+            AI-powered systems to delivery-style platforms, I love creating
+            products that solve practical problems.
           </p>
 
+          <div className="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+            {/*------------------ Resume Button ------------------------ */}
+            <a
+              href="https://drive.google.com/file/d/1XGrGtGCUFmliX1xtggSEGBMO52_Ao7Lr/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-white py-3 px-6 rounded-full text-sm font-bold transition duration-300 transform hover:scale-105"
+              style={{
+                background: "linear-gradient(90deg, #8245ec, #a855f7)",
+                boxShadow: "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
+              }}
+            >
+              <FaDownload />
+              Resume
+            </a>
 
+            {/*------------------ Linkedin Button ------------------------ */}
+            <a
+              href="https://www.linkedin.com/in/deepak-jakkul/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-white py-3 px-6 rounded-full text-sm font-bold transition duration-300 transform hover:scale-105"
+              style={{
+                background: "linear-gradient(90deg, #8245ec, #a855f7)",
+                boxShadow: "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
+              }}
+            >
+              <FaLinkedin />
+              LinkedIn
+            </a>
 
-          {/*------------------ Resume Button ------------------------ */}
-          <a
-            href="https://drive.google.com/file/d/1XGrGtGCUFmliX1xtggSEGBMO52_Ao7Lr/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
-            style={{
-              background: "linear-gradient(90deg, #8245ec, #a855f7)",
-              boxShadow: "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
-            }}
-          >
-            DOWNLOAD CV
-          </a>
+            {/*------------------ Email Button ------------------------ */}
+            <a
+              href="mailto:deepakjakkul2002@gmail.com"
+              className="flex items-center gap-2 text-white py-3 px-6 rounded-full text-sm font-bold transition duration-300 transform hover:scale-105"
+              style={{
+                background: "linear-gradient(90deg, #8245ec, #a855f7)",
+                boxShadow: "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
+              }}
+            >
+              <FaEnvelope />
+              Email Me
+            </a>
+          </div>
         </div>
-
-
 
         {/* ----------------Right Side---------------------------------- */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
@@ -89,8 +115,43 @@ const About = () => {
             />
           </Tilt>
         </div>
+      </div>
 
+      <div className="mt-16 py-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          ⚡ About Me
+        </h2>
 
+        <div className="text-gray-400 text-base md:text-lg leading-relaxed space-y-4 max-w-4xl">
+          <p>
+            Hi! I’m Deepak, a passionate full-stack developer who loves building
+            real-world products that solve practical problems. Over the past two
+            years, I’ve focused on creating applications that go beyond
+            tutorials and reflect how modern production systems actually work.
+          </p>
+
+          <p>
+            I work extensively with the MERN stack and backend-heavy
+            architectures. I’ve built projects ranging from an AI-powered RAG
+            chatbot that retrieves and answers from live news sources, to VINGO
+            — a delivery-style platform designed with real-time tracking,
+            structured order flows, Redis session management, and scalable API
+            design.
+          </p>
+
+          <p>
+            My primary interest lies in backend engineering and system design. I
+            enjoy breaking complex workflows into clean, modular services and
+            thinking about how applications behave at scale — performance,
+            reliability, and user experience always come first for me.
+          </p>
+
+          <p>
+            I’m constantly learning and experimenting with cloud technologies,
+            distributed systems, and production best practices to become a
+            stronger engineer capable of building startup-ready software.
+          </p>
+        </div>
       </div>
     </section>
   );

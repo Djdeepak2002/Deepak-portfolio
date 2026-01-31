@@ -22,7 +22,7 @@ const Footer = () => {
             { name: "About", id: "about" },
             { name: "Skills", id: "skills" },
             { name: "Experience", id: "experience" },
-            { name: "Projects", id: "projects" },
+            { id: "work", label: "Projects" },
             { name: "Education", id: "education" },
           ].map((item, index) => (
             <button
@@ -42,7 +42,7 @@ const Footer = () => {
             { icon: <FaTwitter />, link: "https://twitter.com/djdeepak2002" },
             { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/deepak-jakkul" },
             { icon: <FaInstagram />, link: "https://www.instagram.com/djdeepak2002/" },
-            { icon: <FaYoutube />, link: "https://www.youtube.com/" },
+            // { icon: <FaYoutube />, link: "https://www.youtube.com/" },
             
           ].map((item, index) => (
             <a
@@ -59,7 +59,7 @@ const Footer = () => {
 
         {/* Copyright Text */}
         <p className="text-sm text-gray-400 mt-6">
-          © 2025 Deepak Jakkul. All rights reserved.
+          © 2026 Deepak Jakkul. All rights reserved.
         </p>
       </div>
     </footer>

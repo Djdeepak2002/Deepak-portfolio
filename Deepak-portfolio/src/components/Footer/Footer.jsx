@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   // Smooth scroll function
@@ -41,7 +41,7 @@ const Footer = () => {
             { icon: <FaFacebook />, link: "https://www.facebook.com/tarun.kaushik.3511041/" },
             { icon: <FaTwitter />, link: "https://twitter.com/djdeepak2002" },
             { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/deepak-jakkul" },
-            { icon: <FaInstagram />, link: "https://www.instagram.com/djdeepak2002/" },
+            { icon: <FaInstagram />, link: "https://www.instagram.com/djdeepak2002/" }
             // { icon: <FaYoutube />, link: "https://www.youtube.com/" },
             
           ].map((item, index) => (

@@ -54,7 +54,7 @@ const About = () => {
           <div className="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
             {/*------------------ Resume Button ------------------------ */}
             <a
-              href="https://drive.google.com/file/d/1XGrGtGCUFmliX1xtggSEGBMO52_Ao7Lr/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1j9knst8zXFJvQQ0BBdvXGBMstnAYTm8J/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-white py-3 px-6 rounded-full text-sm font-bold transition duration-300 transform hover:scale-105"

@@ -70,6 +70,7 @@ import MMCCLogo from "./assets/education_logo/mmcclogo.jpeg";
 // import removebgLogo from "./assets/work_logo/remove_bg.png";
 
 
+import VingoLogo from "./assets/work_logo/vingo.png";
 import QuickShowLogo from "./assets/work_logo/quickshow.png";
 import omnifoodLogo from "./assets/work_logo/omnifood.png";
 import marketoLogo from "./assets/work_logo/marketo.png";
@@ -266,12 +267,8 @@ export const projects = [
   id: 0,
   title: "VINGO - Food Delivery Platform",
 description:
-"VINGO is a production-grade, full-stack food delivery platform inspired by real-world systems like Swiggy and Zomato. It supports multi-role workflows for customers, restaurant owners, and delivery partners, enabling real-time order placement, status updates, and live delivery tracking using WebSockets.\n\nThe backend is built with Node.js and Express using modular RESTful APIs, secured with JWT-based authentication and role-based access control. Redis is used for session management and caching to optimize performance, while MongoDB ensures scalable data persistence. Razorpay integration enables secure online payments, and Firebase handles real-time notifications. The system is designed with a strong focus on scalability, reliability, and maintainability."
-
-,
-
-
-  image: QuickShowLogo,
+"VINGO is a production-grade, full-stack food delivery platform inspired by real-world systems like Swiggy and Zomato. It supports multi-role workflows for customers, restaurant owners, and delivery partners, enabling real-time order placement, status updates, and live delivery tracking using WebSockets.\n\nThe backend is built with Node.js and Express using modular RESTful APIs, secured with JWT-based authentication and role-based access control. Redis is used for session management and caching to optimize performance, while MongoDB ensures scalable data persistence. Razorpay integration enables secure online payments, and Firebase handles real-time notifications. The system is designed with a strong focus on scalability, reliability, and maintainability.",
+  image: VingoLogo,
   tags: [
     "React JS",
     "Node.js",

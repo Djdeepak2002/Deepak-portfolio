@@ -2,8 +2,11 @@
 import React from "react";
 import { SkillsInfo } from "../../constants";
 import Tilt from "react-parallax-tilt";
+import { useTheme } from "../../context/ThemeContext";
 
-const Skills = () => (
+const Skills = () => {
+  const { isDarkMode } = useTheme();
+  return (
   // <section
   //   id="skills"
   //   className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans bg-skills-gradient clip-path-custom"
@@ -14,16 +17,18 @@ const Skills = () => (
   style={{
     clipPath: "polygon(0 0, 100% 0, 100% 98%, 75% 96%, 0 100%)",
     background:
-      "linear-gradient(38.73deg, rgba(204,0,187,0.15) 0%, rgba(201,32,184,0) 50%), linear-gradient(141.27deg, rgba(0,70,209,0) 50%, rgba(0,70,209,0.15) 100%)",
+      isDarkMode 
+        ? "linear-gradient(38.73deg, rgba(204,0,187,0.15) 0%, rgba(201,32,184,0) 50%), linear-gradient(141.27deg, rgba(0,70,209,0) 50%, rgba(0,70,209,0.15) 100%)"
+        : "linear-gradient(38.73deg, rgba(204,0,187,0.05) 0%, rgba(201,32,184,0) 50%), linear-gradient(141.27deg, rgba(0,70,209,0) 50%, rgba(0,70,209,0.05) 100%)",
   }}
   className="py-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans"
 >
 
     {/* Section Title */}
     <div className="text-center mb-8">
-      <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
+      <h2 className={`text-3xl sm:text-4xl font-bold ${isDarkMode ? "text-white" : "text-gray-900"}`}>SKILLS</h2>
       <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
-      <p className="text-gray-400 mt-4 text-lg font-semibold">
+      <p className={`mt-4 text-lg font-semibold ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
       A collection of my technical skills and expertise honed through various projects and experiences
       </p>
     </div>
@@ -33,10 +38,15 @@ const Skills = () => (
       {SkillsInfo.map((category) => (
         <div
           key={category.title}
-          className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white 
-          shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"
+          className={`backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
+            isDarkMode
+              ? "bg-gray-900 border-white"
+              : "bg-gray-50 border-gray-300"
+          }`}
         >
-          <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center">
+          <h3 className={`text-2xl sm:text-3xl font-semibold mb-4 text-center ${
+            isDarkMode ? "text-gray-400" : "text-gray-600"
+          }`}>
             {category.title}
           </h3>
 
@@ -54,14 +64,18 @@ const Skills = () => (
               {category.skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex items-center justify-center space-x-2 bg-transparent border-2 border-gray-700 rounded-3xl py-2 px-2 sm:py-2 sm:px-2 text-center"
+                  className={`flex items-center justify-center space-x-2 bg-transparent border-2 rounded-3xl py-2 px-2 sm:py-2 sm:px-2 text-center ${
+                    isDarkMode
+                      ? "border-gray-700 text-gray-300"
+                      : "border-gray-300 text-gray-700"
+                  }`}
                 >
                   <img
                     src={skill.logo}
                     alt={`${skill.name} logo`}
                     className="w-6 h-6 sm:w-8 sm:h-8"
                   />
-                  <span className="text-xs sm:text-sm text-gray-300">
+                  <span className="text-xs sm:text-sm">
                     {skill.name}
                   </span>
                 </div>
@@ -72,6 +86,7 @@ const Skills = () => (
       ))}
     </div>
   </section>
-);
+  );
+};
 
 export default Skills;

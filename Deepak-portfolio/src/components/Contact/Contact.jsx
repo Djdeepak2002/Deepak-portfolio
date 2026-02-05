@@ -2,10 +2,12 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useTheme } from "../../context/ThemeContext";
 
 const Contact = () => {
   const form = useRef();
   const [isSent, setIsSent] = useState(false);
+  const { isDarkMode } = useTheme();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -28,7 +30,7 @@ const Contact = () => {
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
-            theme: "dark",
+            theme: isDarkMode ? "dark" : "light",
           });
         },
         (error) => {
@@ -40,7 +42,7 @@ const Contact = () => {
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
-            theme: "dark",
+            theme: isDarkMode ? "dark" : "light",
           });
         }
       );
@@ -49,23 +51,31 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center py-24 px-[12vw] md:px-[7vw] lg:px-[20vw]"
+      className={`flex flex-col items-center justify-center py-24 px-[12vw] md:px-[7vw] lg:px-[20vw] ${
+        isDarkMode ? "bg-[#050414]" : "bg-white"
+      }`}
     >
       {/* Toast Container */}
       <ToastContainer />
 
       {/* Section Title */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">CONTACT</h2>
+        <h2 className={`text-4xl font-bold ${isDarkMode ? "text-white" : "text-gray-900"}`}>CONTACT</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
-          I’d love to hear from you—reach out for any opportunities or questions!
+        <p className={`mt-4 text-lg font-semibold ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
+          I'd love to hear from you—reach out for any opportunities or questions!
         </p>
       </div>
 
       {/* Contact Form */}
-      <div className="mt-8 w-full max-w-md bg-[#0d081f] p-6 rounded-lg shadow-lg border border-gray-700">
-        <h3 className="text-xl font-semibold text-white text-center">
+      <div className={`mt-8 w-full max-w-md p-6 rounded-lg shadow-lg border ${
+        isDarkMode
+          ? "bg-[#0d081f] border-gray-700"
+          : "bg-gray-50 border-gray-300"
+      }`}>
+        <h3 className={`text-xl font-semibold text-center ${
+          isDarkMode ? "text-white" : "text-gray-900"
+        }`}>
           Connect With Me <span className="ml-1">🚀</span>
         </h3>
 
@@ -75,28 +85,44 @@ const Contact = () => {
             name="user_email"
             placeholder="Your Email"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className={`w-full p-3 rounded-md border focus:outline-none focus:border-purple-500 ${
+              isDarkMode
+                ? "bg-[#131025] text-white border-gray-600"
+                : "bg-white text-gray-900 border-gray-300"
+            }`}
           />
           <input
             type="text"
             name="user_name"
             placeholder="Your Name"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className={`w-full p-3 rounded-md border focus:outline-none focus:border-purple-500 ${
+              isDarkMode
+                ? "bg-[#131025] text-white border-gray-600"
+                : "bg-white text-gray-900 border-gray-300"
+            }`}
           />
           <input
             type="text"
             name="subject"
             placeholder="Subject"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className={`w-full p-3 rounded-md border focus:outline-none focus:border-purple-500 ${
+              isDarkMode
+                ? "bg-[#131025] text-white border-gray-600"
+                : "bg-white text-gray-900 border-gray-300"
+            }`}
           />
           <textarea
             name="message"
             placeholder="Message"
             rows="4"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className={`w-full p-3 rounded-md border focus:outline-none focus:border-purple-500 ${
+              isDarkMode
+                ? "bg-[#131025] text-white border-gray-600"
+                : "bg-white text-gray-900 border-gray-300"
+            }`}
           />
           
           {/* Send Button */}

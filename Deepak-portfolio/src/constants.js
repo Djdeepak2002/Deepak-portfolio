@@ -152,9 +152,14 @@ export const experiences = [
     company: "Forstu.co",
     date: "February 2025 - Present",
    desc: [
-  "Built and deployed a Scholarship Automation Platform using React.js, Node.js, Express.js, and MySQL, streamlining the end-to-end scholarship process for students and administrators.",
-  "Designed and integrated RESTful APIs to trigger Selenium (Java) automation, reducing manual verification time and improving efficiency by 30%.",
-  "Deployed the full-stack application on AWS EC2 (within a VPC) using PM2 for process management, ensuring high availability, scalability, and performance."
+   "Engineered and deployed a full-stack Scholarship Automation Platform using React.js, Node.js, Express.js, and MySQL, digitizing the complete scholarship lifecycle for 5,000+ student applications.",
+      "Designed and implemented scalable RESTful APIs to integrate Selenium-based (Java) automation workflows, reducing manual document verification efforts by approximately 30%.",
+      "Automated scholarship eligibility checks, document validation, and status tracking, cutting average processing time per application by 40%.",
+      "Implemented secure authentication and authorization using JWT and Role-Based Access Control (RBAC) to support multi-role access for students, admins, and reviewers.",
+      "Deployed the application on AWS EC2 within a secure VPC, configuring IAM roles, security groups, and network rules to ensure data security and compliance.",
+      "Configured PM2 for Node.js process management, enabling zero-downtime deployments and improving system uptime to 99.9%.",
+      "Optimized backend APIs and database queries, improving average API response time by 25% under concurrent user load.",
+      "Collaborated in Agile sprint cycles, contributing to feature planning, code reviews, and production releases in a cross-functional team."
 ],
 
     skills: [
@@ -260,8 +265,12 @@ export const projects = [
    {
   id: 0,
   title: "VINGO - Food Delivery Platform",
-  description:
-    "VINGO is a production-style full-stack food delivery platform inspired by apps like Swiggy and Zomato. It supports real-time order placement, delivery partner assignment, live location tracking using WebSockets, and a structured order state machine to manage each stage from checkout to delivery. The backend is built with modular REST APIs, Redis-based session handling, secure JWT authentication, and scalable service separation. Razorpay integration enables seamless online payments, while Firebase powers instant delivery updates and notifications. Designed with performance, reliability, and real-world scalability in mind.",
+description:
+"VINGO is a production-grade, full-stack food delivery platform inspired by real-world systems like Swiggy and Zomato. It supports multi-role workflows for customers, restaurant owners, and delivery partners, enabling real-time order placement, status updates, and live delivery tracking using WebSockets.\n\nThe backend is built with Node.js and Express using modular RESTful APIs, secured with JWT-based authentication and role-based access control. Redis is used for session management and caching to optimize performance, while MongoDB ensures scalable data persistence. Razorpay integration enables secure online payments, and Firebase handles real-time notifications. The system is designed with a strong focus on scalability, reliability, and maintainability."
+
+,
+
+
   image: QuickShowLogo,
   tags: [
     "React JS",

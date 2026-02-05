@@ -95,38 +95,45 @@
 
 import React from "react";
 import { education } from "../../constants";
+import { useTheme } from "../../context/ThemeContext";
 
 const Education = () => {
+  const { isDarkMode } = useTheme();
   return (
     <section
       id="education"
       style={{
         clipPath: "polygon(0 0, 100% 0, 100% 98%, 75% 96%, 0 100%)",
         background:
-          "linear-gradient(38.73deg, rgba(204,0,187,0.15) 0%, rgba(201,32,184,0) 50%), linear-gradient(141.27deg, rgba(0,70,209,0) 50%, rgba(0,70,209,0.15) 100%)",
+          isDarkMode
+            ? "linear-gradient(38.73deg, rgba(204,0,187,0.15) 0%, rgba(201,32,184,0) 50%), linear-gradient(141.27deg, rgba(0,70,209,0) 50%, rgba(0,70,209,0.15) 100%)"
+            : "linear-gradient(38.73deg, rgba(204,0,187,0.05) 0%, rgba(201,32,184,0) 50%), linear-gradient(141.27deg, rgba(0,70,209,0) 50%, rgba(0,70,209,0.05) 100%)",
       }}
       className="py-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans"
     >
       {/* Section Title */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">EDUCATION</h2>
+        <h2 className={`text-4xl font-bold ${isDarkMode ? "text-white" : "text-gray-900"}`}>EDUCATION</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
+        <p className={`mt-4 text-lg font-semibold ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
           My education has been a journey of learning and development. Here are
           the details of my academic background.
         </p>
       </div>
 
       {/* Timeline Container */}
-      {/* Timeline Container */}
       <div className="relative">
         {/* Vertical Line */}
-        <div className="absolute left-8 top-0 w-1 bg-white h-full"></div>
+        <div className={`absolute left-8 top-0 w-1 h-full ${isDarkMode ? "bg-white" : "bg-gray-900"}`}></div>
 
         {education.map((edu) => (
           <div key={edu.id} className="mb-14 relative">
             {/* Timeline Logo */}
-            <div className="absolute left-8 top-6 transform -translate-x-1/2 w-12 h-12 rounded-full overflow-hidden ring-4 ring-[#050414] bg-gray-900 flex justify-center items-center z-10">
+            <div className={`absolute left-8 top-6 transform -translate-x-1/2 w-12 h-12 rounded-full overflow-hidden ring-4 flex justify-center items-center z-10 ${
+              isDarkMode
+                ? "ring-[#050414] bg-gray-900"
+                : "ring-white bg-gray-100"
+            }`}>
               <img
                 src={edu.img}
                 alt={edu.school}
@@ -135,10 +142,14 @@ const Education = () => {
             </div>
 
             {/* Education Card */}
-            <div className="ml-28 p-6 md:p-8 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] transform transition-transform duration-300 hover:scale-[1.02]">
+            <div className={`ml-28 p-6 md:p-8 rounded-2xl border backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] transform transition-transform duration-300 hover:scale-[1.02] ${
+              isDarkMode
+                ? "border-white bg-gray-900"
+                : "border-gray-300 bg-gray-50"
+            }`}>
               {/* Header Row */}
               <div className="flex items-center gap-6">
-                <div className="w-16 h-16 bg-white rounded-md overflow-hidden shrink-0">
+                <div className={`w-16 h-16 rounded-md overflow-hidden shrink-0 ${isDarkMode ? "bg-white" : "bg-gray-200"}`}>
                   <img
                     src={edu.img}
                     alt={edu.school}
@@ -146,19 +157,19 @@ const Education = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-white">
+                  <h3 className={`text-xl md:text-2xl font-semibold ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                     {edu.degree}
                   </h3>
-                  <h4 className="text-sm text-gray-300">{edu.school}</h4>
-                  <p className="text-xs text-gray-500 mt-1">{edu.date}</p>
+                  <h4 className={`text-sm ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>{edu.school}</h4>
+                  <p className={`text-xs mt-1 ${isDarkMode ? "text-gray-500" : "text-gray-500"}`}>{edu.date}</p>
                 </div>
               </div>
 
               {/* Grade */}
-              <p className="mt-4 text-gray-400 font-bold">Grade: {edu.grade}</p>
+              <p className={`mt-4 font-bold ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>Grade: {edu.grade}</p>
 
               {/* Description */}
-              <p className="mt-2 text-gray-400">{edu.desc}</p>
+              <p className={`mt-2 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>{edu.desc}</p>
             </div>
           </div>
         ))}

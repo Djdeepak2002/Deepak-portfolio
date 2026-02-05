@@ -3,8 +3,10 @@ import { Typewriter } from "react-simple-typewriter";
 import { FaLinkedin, FaEnvelope, FaDownload } from "react-icons/fa";
 import Tilt from "react-parallax-tilt";
 import profileImage from "../../assets/profile21.png";
+import { useTheme } from "../../context/ThemeContext";
 
 const About = () => {
+  const { isDarkMode } = useTheme();
   return (
     <section
       id="about"
@@ -17,16 +19,20 @@ const About = () => {
           {/* <div className="md:w-1/2 text-center md:text-left mt-2 md:mt-0"> */}
 
           {/* Greeting */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-2 leading-tight ${
+            isDarkMode ? "text-white" : "text-gray-900"
+          }`}>
             Hi, I am
           </h1>
           {/* Name */}
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+          <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight ${
+            isDarkMode ? "text-white" : "text-gray-900"
+          }`}>
             Deepak Jakkul
           </h2>
           {/* Skills Heading with Typing Effect */}
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
-            <span className="text-white">I am a </span>
+            <span className={isDarkMode ? "text-white" : "text-gray-900"}>I am a </span>
             <Typewriter
               words={[
                 "Software Engineer",
@@ -44,7 +50,9 @@ const About = () => {
           </h3>
 
           {/*--------------------- About Me Paragraph ----------------------*/}
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
+          <p className={`text-base sm:text-lg md:text-lg mb-10 mt-8 leading-relaxed ${
+            isDarkMode ? "text-gray-400" : "text-gray-600"
+          }`}>
             I build real-world, scalable applications with a focus on backend
             architecture, performance, and production-ready design. From
             AI-powered systems to delivery-style platforms, I love creating
@@ -118,11 +126,15 @@ const About = () => {
       </div>
 
       <div className="mt-16 py-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <h2 className={`text-3xl md:text-4xl font-bold mb-6 ${
+          isDarkMode ? "text-white" : "text-gray-900"
+        }`}>
           ⚡ About Me
         </h2>
 
-        <div className="text-gray-400 text-base md:text-lg leading-relaxed space-y-4 max-w-4xl">
+        <div className={`text-base md:text-lg leading-relaxed space-y-4 max-w-4xl ${
+          isDarkMode ? "text-gray-400" : "text-gray-600"
+        }`}>
           <p>
             Hi! I’m Deepak, a passionate full-stack developer who loves building
             real-world products that solve practical problems. Over the past two

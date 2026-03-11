@@ -74,6 +74,7 @@ import VingoLogo from "./assets/work_logo/vingo.png";
 import QuickShowLogo from "./assets/work_logo/quickshow.png";
 import omnifoodLogo from "./assets/work_logo/omnifood.png";
 import marketoLogo from "./assets/work_logo/marketo.png";
+import newsRAGLogo from "./assets/work_logo/news-rag.png";
 
 export const SkillsInfo = [
   {
@@ -297,16 +298,16 @@ description:
     webapp: "https://quickshow-app.vercel.app/",
   },
  
-  // {
-  //   id: 2,
-  //   title: "Movie Recommendation App",
-  //   description:
-  //     "A React-based web application that provides movie recommendations based on different criteria, such as genres, user preferences, and popular trends. The intuitive design and smooth experience make it a go-to app for movie enthusiasts.",
-  //   image: movierecLogo,
-  //   tags: ["React JS", "API", "HTML", "CSS", "JavaScript"],
-  //   github: "https://github.com/codingmastr/Movie-Recommendation-App",
-  //   webapp: "https://movie-recommendation-app-jet.vercel.app/",
-  // },
+  {
+  id: 2,
+  title: "News RAG Chatbot - AI News Assistant",
+  description:
+    "Developed a production-grade Retrieval Augmented Generation (RAG) news chatbot that ingests live RSS feeds, converts articles into vector embeddings using Jina, and stores them in Qdrant for semantic search. Integrated Google Gemini API to generate context-aware answers grounded in real news data. Implemented Redis caching for faster responses and built scalable backend APIs using Node.js and Express.js, enabling users to ask natural language questions and receive accurate, source-based news insights in real time.",
+  image: newsRAGLogo,
+    tags: ["Node.js", "Express.js", "Qdrant","Google Gemini API", "Redis", "RAG", "Vector Database", "React.js"],
+  github: "https://github.com/Djdeepak2002/RAG-project",
+}
+
   // {
   //   id: 3,
   //   title: "Email Validator NPM Package",
@@ -367,6 +368,7 @@ description:
   //   github: "https://github.com/codingmastr/Image-Background-Remover",
   //   webapp: "https://removeyourbg.netlify.app/",
   // },
+  ,
   {
     id: 9,
     title: "Omnifood - Healthy Foods Delivery",

@@ -70,11 +70,13 @@ const Skills = () => {
                       : "border-gray-300 text-gray-700"
                   }`}
                 >
-                  <img
-                    src={skill.logo}
-                    alt={`${skill.name} logo`}
-                    className="w-6 h-6 sm:w-8 sm:h-8"
-                  />
+                  {skill.logo && (
+                    <img
+                      src={skill.logo}
+                      alt={`${skill.name} logo`}
+                      className={`w-6 h-6 sm:w-8 sm:h-8 ${skill.invert && isDarkMode ? 'invert' : ''}`}
+                    />
+                  )}
                   <span className="text-xs sm:text-sm">
                     {skill.name}
                   </span>

@@ -2,6 +2,11 @@
 
 @import "tailwindcss";
 
+@theme {
+  --color-brand-dark: #050414;
+  --color-card-dark: #251f38;
+}
+
 
 * {
     font-family: "Poppins", sans-serif;

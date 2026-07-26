@@ -14,7 +14,7 @@ function AppContent() {
   const { isDarkMode } = useTheme();
 
   return (
-    <div className={isDarkMode ? "bg-[#050414]" : "bg-white"}>
+    <div className={isDarkMode ? "bg-brand-dark" : "bg-white"}>
 
        <BlurBlob position={{ top: '35%', left: '20%' }} size={{ width: '30%', height: '40%' }} />
 

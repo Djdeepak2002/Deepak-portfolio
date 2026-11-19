@@ -157,7 +157,7 @@ export const experiences = [
     img: forstuLogo,
     role: "Software Engineer Intern",
     company: "Forstu.co",
-    date: "February 2025 - Present",
+    date: "February 2026 - August 2026",
     desc: [
       "Engineered and deployed a full-stack Scholarship Automation Platform using React.js, Node.js, Express.js, and MySQL, digitizing the complete scholarship lifecycle for 5,000+ student applications.",
       "Designed and implemented scalable RESTful APIs to integrate Selenium-based (Java) automation workflows, reducing manual document verification efforts by approximately 30%.",
